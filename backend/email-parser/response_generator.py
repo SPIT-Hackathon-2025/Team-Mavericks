@@ -1,6 +1,6 @@
 import json
 import time
-from llm_utils import generate_response_llm
+from gem_utils import generate_response_llm
 
 def generate_responses(temp_output_file, final_output_file):
     """Reads emails, generates LLM-based responses, and saves the final output."""
