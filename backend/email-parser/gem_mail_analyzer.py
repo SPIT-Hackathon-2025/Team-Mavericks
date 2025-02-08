@@ -1,8 +1,18 @@
 import json
 import ollama
 import time
+import os
+import google.generativeai as genai
+from dotenv import load_dotenv
 
 def categorize_email_with_ollama(email_body):
+    api_key = os.getenv("GEMINI_KEY")
+    if not api_key:
+        print("Error: Gemini key not found")
+        return [], 0
+
+    # Configure the Google Generative AI SDK with the API key
+    genai.configure(api_key=api_key)
     """Uses Ollama (LLaMA) to classify an email into predefined categories and measures time taken."""
     prompt = f"""
     You are an AI email classifier. Classify the following email into one of these categories:
@@ -18,10 +28,11 @@ def categorize_email_with_ollama(email_body):
     """
 
     start_time = time.time()  # Start timer
-    response = ollama.chat(model="mistral", messages=[{"role": "user", "content": prompt}])
+    model = genai.GenerativeModel("gemini-1.5-flash")
+    response = model.generate_content(prompt)
     end_time = time.time()  # End timer
 
-    category = response["message"]["content"].strip()
+    category = response.text.strip()
     processing_time = end_time - start_time  # Calculate time taken
 
     return category, processing_time

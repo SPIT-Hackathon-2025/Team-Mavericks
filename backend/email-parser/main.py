@@ -1,7 +1,7 @@
 import time
 import json
 from mails import fetch_unread_emails  # Import fetch_unread_emails from mails.py
-from mail_analyzer import analyze_emails_with_ollama  # Import analyze_emails_with_ollama from mail_analyzer.py
+from gem_mail_analyzer import analyze_emails_with_ollama  # Import analyze_emails_with_ollama from mail_analyzer.py
 from email_details_extractor import extract_email_details  # Import extract_email_details
 from response_generator import generate_responses  # Import generate_responses
 
