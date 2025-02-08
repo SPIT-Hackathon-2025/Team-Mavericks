@@ -19,7 +19,7 @@ def extract_meeting_details(email_body):
     The following email contains a meeting request. Extract the key details:
     - Event Name
     - Event Description
-    - Event Time (if mentioned, otherwise return '')
+    - Event Time (if mentioned give in iso format, otherwise return '')
     - Guests in the event
 
     Email Content:
@@ -43,7 +43,7 @@ def extract_task_details(email_body):
     The following email contains a task assignment. Extract the key details:
     - Task Name
     - Task Description
-    - Due Date (if mentioned, otherwise return '')
+    - Due Date (if mentioned in yyyy-mm-dd format, otherwise return '')
 
     Email Content:
     {email_body}
@@ -65,7 +65,7 @@ def extract_followUp_details(email_body):
     The following email is a follow-up to a meeting. Extract the key details:
 
     -Meeting Topic  
-    -Meeting Date
+    -Meeting Date in yyyy-mm-dd format
     -meeting Time(if mentioned, otherwise return "")  
     -Action Items (list of tasks with assignees and deadlines if available)
     -Next Steps (if mentioned, otherwise return "")  
@@ -93,7 +93,7 @@ def extract_transcript(email_body):
 
     - **Meeting Information:**  
         - **Title:** [Extract the meeting title/topic]
-        - **Date:** [Extract the meeting date]
+        - **Date:** [Extract the meeting date in yyyy-mm-dd format]
         - **Time:** [Extract the meeting time, or return an empty string if not mentioned]
         - **Attendees:** [List of attendees, if available, or return an empty string, can take from cc bcc also]
     
@@ -107,8 +107,8 @@ def extract_transcript(email_body):
         [List any decisions made during the meeting]
 
     - **Next Meeting:**  
-        - **Date:** [Extract date for the next meeting]
-        - **Time:** [Extract time for the next meeting]
+        - **Date:** [Extract date for the next meeting in yyyy-mm-dd format]
+        - **Time:** [Extract time for the next meeting in iso format]
         - **Location:** [Extract location for the next meeting, or return an empty string if not mentioned]
         
     - **Adjournment:**  

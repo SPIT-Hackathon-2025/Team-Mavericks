@@ -1,5 +1,6 @@
 import time
 import json
+import os
 from mails import fetch_unread_emails  # Import fetch_unread_emails from mails.py
 from gem_mail_analyzer import analyze_emails_with_ollama  # Import analyze_emails_with_ollama from mail_analyzer.py
 from email_details_extractor import extract_email_details  # Import extract_email_details
@@ -45,7 +46,32 @@ def process_emails():
             generate_responses(extracted_file, output_file)
 
             print(f"✅ Responses generated and saved to {output_file}.")
+
+            with open(extracted_file, "r", encoding="utf-8") as f:
+                categorized_emails = json.load(f)
+            
+            for email in categorized_emails:
+                category = email.get('category', 'Uncategorized')  # Default to 'Uncategorized' if no category
+                category_file = os.path.join(emails_folder, f"{category}.json")
+
+                # Append emails to the category-specific JSON file
+                if os.path.exists(category_file):
+                    with open(category_file, "r+", encoding="utf-8") as cat_f:
+                        existing_data = json.load(cat_f)
+                        existing_data.append(email)
+                        cat_f.seek(0)  # Move to the beginning of the file
+                        json.dump(existing_data, cat_f, indent=4, ensure_ascii=False)
+                else:
+                    with open(category_file, "w", encoding="utf-8") as cat_f:
+                        json.dump([email], cat_f, indent=4, ensure_ascii=False)
+
+                print(f"📂 Added email to category {category} file: {category_file}")
+
+            # Delete the original email file after processing
+            os.remove(email_file)
+            print(f"🗑️ Deleted the original email file: {email_file}")
         else:
+
             print("❌ No new emails found.")
 
         # Sleep for a specified interval before checking for new emails again
