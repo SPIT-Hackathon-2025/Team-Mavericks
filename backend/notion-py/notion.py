@@ -87,10 +87,49 @@ def check_due_tasks():
     except Exception as error:
         print("❌ Error checking due tasks:", str(error))
 
+def triggerCronJob():
 #2 minutes
-schedule.every(2).minutes.do(check_due_tasks)
-
+    schedule.every(2).minutes.do(check_due_tasks)
 # Run Scheduler
-while True:
-    schedule.run_pending()
-    time.sleep(30)
+    while True:
+        schedule.run_pending()
+        time.sleep(30)
+
+
+def create_task(task_name, status, priority, due_date, assignee_emails):
+    try:
+        users_response = notion.users.list()
+        users = users_response.get("results", [])
+
+        print("users", users)
+        assignees = [
+            {"id": user["id"]} for user in users
+            if "person" in user and user["person"].get("email") in assignee_emails
+        ]
+        print("assignees", assignees)
+
+        response = notion.pages.create(
+            parent={"database_id": DATABASE_ID},
+            properties={
+                "Task": {
+                    "title": [{"text": {"content": task_name}}]
+                },
+                "Status": {
+                    "status": {"name": status}
+                },
+                "Priority": {
+                    "select": {"name": priority}
+                },
+                "Due Date": {
+                    "date": {"start": due_date}
+                },
+                "Assignee": {
+                    "people": assignees
+                }
+            }
+        )
+
+        print("✅ Task Created:", response)
+    except Exception as error:
+        print("❌ Error creating task:", getattr(error, "response", {}).get("data", str(error)))
+# create_task("Fix API Bug 2", "Done", "Low", "2025-02-08", ["nilimajnc@gmail.com"])
