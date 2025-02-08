@@ -1,0 +1,41 @@
+[
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Update Project Documentation",
+        "date": "2025-02-09 02:55:50",
+        "body": "*Dear Jayesh,* I hope you're doing well. As discussed in our recent meeting, I would like to assign you the task of updating the project documentation. Please focus on the following: 1. *Revise the project timeline* to reflect the latest changes. 2. *Include updated milestones* based on the recent developments. The updated documentation should be submitted by *February 15, 2025*. If you require any additional information or clarification, please don't hesitate to reach out. Thank you for your attention to this matter. Best regards, Sarah James Project Manager, XYZ Company",
+        "attachments": [],
+        "category": "Task Assignment",
+        "processing_time": 0.797,
+        "task_name": "Update Project Documentation",
+        "task_description": "Revise the project timeline to reflect the latest changes. Include updated milestones based on the recent developments.",
+        "due_date": "February 15, 2025",
+        "response": {
+            "response": {
+                "subject": "Re: Update Project Documentation",
+                "body": "Dear Sarah,\n\nThank you for the email and the detailed instructions regarding updating the project documentation. I understand I need to revise the project timeline and include the updated milestones, with a deadline of February 15, 2025.\n\nI will begin working on this immediately and will reach out if I have any questions. \n\nBest regards,\nJay NC"
+            }
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "neww project",
+        "date": "2025-02-09 03:00:34",
+        "body": "give me details of new project by 4th march without fail",
+        "attachments": [],
+        "category": "Task Assignment",
+        "processing_time": 0.623,
+        "task_name": "Gather new project details",
+        "task_description": "Provide details of the new project.",
+        "due_date": "March 4",
+        "response": {
+            "response": "Subject: Re: neww project\n\nHi Tejashree,\n\nCould you please provide a bit more information about which new project you're referring to?  This will help me gather the correct details for you.\n\nI'll then compile the information and send it to you by March 4th.\n\nThanks,\n\nJay NC"
+        }
+    }
+]
