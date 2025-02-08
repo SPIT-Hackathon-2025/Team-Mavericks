@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@syncfusion/ej2-base": "^28.2.4",
+    "@syncfusion/ej2-react-kanban": "^28.2.3",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-uuid": "^2.0.0"
+  }
+}
