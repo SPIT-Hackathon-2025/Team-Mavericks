@@ -7,6 +7,7 @@ import {
   MdHome,
   MdLock,
   MdOutlineShoppingCart,
+  MdCamera,
 } from 'react-icons/md';
 
 // Admin Imports
@@ -16,6 +17,8 @@ import Profile from 'views/admin/profile';
 import DataTables from 'views/admin/dataTables';
 import RTL from 'views/admin/rtl';
 import Home from "views/admin/home";
+import Today from "views/admin/today"
+import Mom from "views/admin/mom";
 
 // Auth Imports
 import SignInCentered from 'views/auth/signIn';
@@ -33,7 +36,14 @@ const routes = [
     layout: '/admin',
     path: '/today',
     icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
-    component: <Home />,
+    component: <Today />,
+  },
+  {
+    name: 'Minutes of the meeting',
+    layout: '/admin',
+    path: '/mom',
+    icon: <Icon as={MdCamera} width="20px" height="20px" color="inherit" />,
+    component: <Mom />,
   },
   {
     name: 'Main Dashboard',

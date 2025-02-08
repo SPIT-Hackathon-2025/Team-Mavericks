@@ -7,14 +7,17 @@ import {
     Text,
     useColorModeValue,
 } from "@chakra-ui/react";
-import Projects from './components/Projects';
+import MeetCard from './components/meetingCard'
 
-const Today = () => {
+
+const Mom = () => {
     return (
         <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
-            <Projects/>
+
+            <MeetCard />
         </Box>
+
     )
 }
 
-export default Today
+export default Mom
