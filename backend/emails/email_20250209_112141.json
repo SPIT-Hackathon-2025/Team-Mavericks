@@ -1,0 +1,21 @@
+[
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "tejashree.bhangale03@gmail.com",
+        "bcc": "",
+        "subject": "Request for Meeting to Discuss Collaboration Opportunity",
+        "date": "2025-02-09 11:21:41",
+        "body": "Dear Jayesh, I hope this message finds you well. I would like to request a meeting with you to discuss a potential collaboration between InnovateX Incubator and our team at FutureTech Innovations. We believe there could be exciting opportunities for mutual growth, and I would love to explore how we can work together. Could we schedule a meeting on Monday, February 12th at 10:00 AM Please let me know if the time works best for you, or feel free to suggest an alternative. Looking forward to your response. Best regards, Emily Roberts FutureTech Innovations emily.roberts@futuretech.com",
+        "attachments": [],
+        "category": "Meeting Request",
+        "processing_time": 0.55,
+        "event_name": "Collaboration Discussion: InnovateX Incubator & FutureTech Innovations",
+        "event_description": "Discuss a potential collaboration between InnovateX Incubator and FutureTech Innovations to explore opportunities for mutual growth.",
+        "event_time": "2024-02-12T10:00:00",
+        "guests": [
+            "Jayesh",
+            "Emily Roberts"
+        ]
+    }
+]

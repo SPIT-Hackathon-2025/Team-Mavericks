@@ -20,5 +20,77 @@
         "response": {
             "response": "Subject: Re: Jay, you have a good eye\n\nThanks for the email, Pinterest!\n\nI'll check out the recommendations."
         }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Inquiry Regarding Incubation Program",
+        "date": "2025-02-09 10:46:59",
+        "body": "Dear Jayesh, I hope this email finds you well. My name is John Doe, and I am reaching out to inquire about your incubator program at InnovateX Incubator. I have been following the work your team is doing and am very interested in learning more about the opportunities available for startups within your program. Could you kindly provide more details about the application process, program benefits, and any upcoming deadlines? Additionally, I would appreciate any information on the types of startups or projects that are typically a good fit for your program. Looking forward to your response. Best regards, John Doe Tech Innovations LLC johndoe@email.com",
+        "attachments": [],
+        "category": "Follow-up",
+        "processing_time": 0.83,
+        "meeting_topic": null,
+        "meeting_date": null,
+        "meeting_time": "",
+        "action_items": [],
+        "response_request": "Provide details about the application process, program benefits, upcoming deadlines, and types of startups that are a good fit for the InnovateX Incubator program.",
+        "next_steps": null,
+        "description": "This email is an inquiry from John Doe of Tech Innovations LLC about the InnovateX Incubator program. He seeks information on the application process, program benefits, deadlines, and suitable startup types.  It's a request for information, not a follow-up to a meeting.",
+        "priority": "Low",
+        "response": {
+            "response": "Subject: Re: Inquiry Regarding Incubation Program\n\nDear John,\n\nThank you for your interest in InnovateX Incubator's program and for reaching out. We appreciate you following our work.\n\nWe're happy to provide you with more information about our incubation program.  You can find details about the application process, program benefits, eligibility criteria, and upcoming deadlines on our website: [Insert Website Link Here]. This page also includes case studies of some of our successful startups, which should give you a good idea of the types of projects that thrive in our environment.\n\nIf you have any specific questions after reviewing the website, please don't hesitate to ask. We also encourage you to attend one of our online information sessions [Insert Link to Information Session or details about scheduling a call if applicable]. These sessions provide a great opportunity to learn more about the program and connect with our team.\n\nWe look forward to hearing from you.\n\nBest regards,\n\nJay NC\nInnovateX Incubator \npracticals321@gmail.com"
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Inquiry Regarding Incubation Program",
+        "date": "2025-02-09 10:46:59",
+        "body": "Dear Jayesh, I hope this email finds you well. My name is John Doe, and I am reaching out to inquire about your incubator program at InnovateX Incubator. I have been following the work your team is doing and am very interested in learning more about the opportunities available for startups within your program. Could you kindly provide more details about the application process, program benefits, and any upcoming deadlines? Additionally, I would appreciate any information on the types of startups or projects that are typically a good fit for your program. Looking forward to your response. Best regards, John Doe Tech Innovations LLC johndoe@email.com",
+        "attachments": [],
+        "category": "Follow-up",
+        "processing_time": 0.569,
+        "meeting_topic": null,
+        "meeting_date": null,
+        "meeting_time": "",
+        "action_items": [],
+        "response_request": "Provide details about the application process, program benefits, upcoming deadlines, and types of startups suitable for the InnovateX Incubator program.",
+        "next_steps": "",
+        "description": "This email is an inquiry from John Doe of Tech Innovations LLC about InnovateX Incubator's program.  He seeks information on the application process, program benefits, deadlines, and suitable startup types.  It's a request for information, not a follow-up to a meeting.",
+        "priority": "Low",
+        "response": {
+            "response": "Subject: Re: Inquiry Regarding Incubation Program\n\nDear John,\n\nThank you for your interest in InnovateX Incubator's program. We appreciate you reaching out and taking the time to learn more about what we offer.\n\nI apologize for the delayed response. I understand you'd like to know more about our application process, program benefits, upcoming deadlines, and the types of startups we typically work with. \n\nI've attached a brochure that provides a comprehensive overview of our program, including details on the application process and key benefits. You can also find information about our program and upcoming deadlines on our website: [Website Address].  We typically support startups in the [mention specific industries or areas] sectors, though we encourage applications from innovative ventures across various fields.\n\nIf you have specific questions after reviewing these resources, please don't hesitate to schedule a call with me using this link: [Scheduling Link]. I'd be happy to discuss your project in more detail and determine if it's a good fit for our program.\n\nWe look forward to hearing from you soon.\n\nBest regards,\n\nJay NC\nInnovateX Incubator"
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Inquiry Regarding Incubation Program",
+        "date": "2025-02-09 10:46:59",
+        "body": "Dear Jayesh, I hope this email finds you well. My name is John Doe, and I am reaching out to inquire about your incubator program at InnovateX Incubator. I have been following the work your team is doing and am very interested in learning more about the opportunities available for startups within your program. Could you kindly provide more details about the application process, program benefits, and any upcoming deadlines? Additionally, I would appreciate any information on the types of startups or projects that are typically a good fit for your program. Looking forward to your response. Best regards, John Doe Tech Innovations LLC johndoe@email.com",
+        "attachments": [],
+        "category": "Follow-up",
+        "processing_time": 1.953,
+        "meeting_topic": "Inquiry about InnovateX Incubator Program",
+        "meeting_date": "",
+        "meeting_time": "",
+        "action_items": [],
+        "response_request": "Provide details about the application process, program benefits, upcoming deadlines, and types of startups suitable for the program.",
+        "next_steps": "",
+        "description": "John Doe from Tech Innovations LLC inquired about InnovateX Incubator program. He seeks information on the application process, program benefits, deadlines, and suitable startup types.  He's interested in the program and its opportunities for startups.",
+        "priority": "Medium",
+        "response": {
+            "response": {
+                "subject": "Re: Inquiry Regarding Incubation Program",
+                "body": "Dear John,\n\nThank you for your interest in InnovateX Incubator's program. We appreciate you reaching out and taking the time to learn more about our offerings.\n\nWe're happy to provide you with more information.  You can find details regarding the application process, program benefits, upcoming deadlines, and preferred startup profiles on our website: [Insert Website Link Here]. This page provides a comprehensive overview of our program and should answer many of your initial questions.\n\nIn addition to the website, we've also attached a brochure that outlines some key aspects of our program.  \n\nIf you have any specific questions after reviewing these resources, please don't hesitate to ask. We'd be happy to schedule a call to discuss your specific needs and how InnovateX can help your startup thrive.\n\nBest regards,\n\nJay NC\nInnovateX Incubator\npracticals321@gmail.com"
+            }
+        }
     }
 ]

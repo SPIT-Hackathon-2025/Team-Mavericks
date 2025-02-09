@@ -13,7 +13,7 @@ import Card from "components/card/Card.js";
 // Custom icons
 import React from "react";
 
-export default function Default(props) {
+export default function Default({newMail}) {
     // const { from, subject, time, body}
     const textColor = useColorModeValue("secondaryGray.900", "white");
     const textColorSecondary = "secondaryGray.600";
@@ -37,14 +37,15 @@ export default function Default(props) {
                         fontSize={{
                             base: "sm",
                         }}>
-                        tejashree.bhangale@gmail.com
+                            {newMail[0].from}
+
                     </StatLabel>
                     <StatNumber
                         color={textColor}
                         fontSize={{
                             base: "xl",
                         }}>
-                        {subject.length >30 ? `${subject.slice(0,50)}...`:subject }
+                        {newMail.subject >30 ? `${newMail.subject.slice(0,50)}...`:newMail.subject }
                     </StatNumber>
                      {/* ( */}
                         <Flex align='center'>
