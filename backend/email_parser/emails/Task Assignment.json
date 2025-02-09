@@ -10,9 +10,10 @@
         "attachments": [],
         "category": "Task Assignment",
         "processing_time": 0.797,
+        "priority":"Medium",
         "task_name": "Update Project Documentation",
         "task_description": "Revise the project timeline to reflect the latest changes. Include updated milestones based on the recent developments.",
-        "due_date": "February 15, 2025",
+        "due_date": "2025-02-08",
         "response": {
             "response": {
                 "subject": "Re: Update Project Documentation",
@@ -30,10 +31,11 @@
         "body": "give me details of new project by 4th march without fail",
         "attachments": [],
         "category": "Task Assignment",
+        "priority":"High",
         "processing_time": 0.623,
         "task_name": "Gather new project details",
         "task_description": "Provide details of the new project.",
-        "due_date": "March 4",
+        "due_date": "2025-03-05",
         "response": {
             "response": "Subject: Re: neww project\n\nHi Tejashree,\n\nCould you please provide a bit more information about which new project you're referring to?  This will help me gather the correct details for you.\n\nI'll then compile the information and send it to you by March 4th.\n\nThanks,\n\nJay NC"
         }

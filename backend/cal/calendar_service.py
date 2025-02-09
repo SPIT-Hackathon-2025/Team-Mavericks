@@ -30,6 +30,22 @@ def get_credentials():
             token.write(creds.to_json())
     return creds
 
+def initialize_calendar_service():
+    """Helper function to authenticate and return the Google Calendar service."""
+    creds = get_credentials()
+    return build("calendar", "v3", credentials=creds)
+
+def extract_event_details(event: dict):
+    """Helper function to extract event details."""
+    event_start = event["start"]["dateTime"]
+    event_end = event["end"]["dateTime"]
+    attendees = event.get("attendees", [])
+
+    event_start_dt = datetime.datetime.fromisoformat(event_start.replace("Z", "+00:00"))
+    event_end_dt = datetime.datetime.fromisoformat(event_end.replace("Z", "+00:00"))
+
+    return event_start, event_end, attendees, event_start_dt, event_end_dt
+
 @router.get("/events")
 def get_events():
     try:
@@ -48,18 +64,11 @@ def get_events():
     except HttpError as error:
         raise HTTPException(status_code=500, detail=f"An error occurred: {error}")
 
-@router.post("/events")
-def create_event(event: dict):
+# @router.post("/events")
+def create_event(event):
     try:
-        creds = get_credentials()
-        service = build("calendar", "v3", credentials=creds)
-
-        event_start = event["start"]["dateTime"]
-        event_end = event["end"]["dateTime"]
-        attendees = event.get("attendees", [])
-
-        event_start_dt = datetime.datetime.fromisoformat(event_start.replace("Z", "+00:00"))
-        event_end_dt = datetime.datetime.fromisoformat(event_end.replace("Z", "+00:00"))
+        service = initialize_calendar_service()
+        event_start, event_end, attendees, event_start_dt, event_end_dt = extract_event_details(event)
 
         for calendar_id in CALENDAR_IDS:
             if calendar_id == "primary":
@@ -107,7 +116,7 @@ def create_event(event: dict):
 
     except HttpError as error:
         raise HTTPException(status_code=500, detail=f"An error occurred: {error}")
-
+    
 @router.get("/events/{date}")
 def get_events_for_day(date: str):
     try:

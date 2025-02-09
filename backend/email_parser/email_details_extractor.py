@@ -1,6 +1,6 @@
 import json
 import time
-from gem_utils import extract_meeting_details, extract_task_details, extract_followUp_details, extract_transcript
+from email_parser.gem_utils import extract_meeting_details, extract_task_details, extract_followUp_details, extract_transcript
 
 def extract_email_details(input_file, temp_output_file):
     """Extracts details from emails and saves intermediate results."""

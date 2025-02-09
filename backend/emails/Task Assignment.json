@@ -1,0 +1,41 @@
+[
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "neww project",
+        "date": "2025-02-09 03:00:34",
+        "body": "give me details of new project by 4th march without fail",
+        "attachments": [],
+        "category": "Task Assignment",
+        "processing_time": 1.965,
+        "task_name": "",
+        "task_description": "give me details of new project",
+        "due_date": "2024-03-04",
+        "response": {
+            "response": "Subject: Re: neww project\n\nHi Tejashree,\n\nCould you please provide a bit more information about the new project you're referring to?  Knowing the project's name or a brief description will help me gather the correct details for you.\n\nI'll make sure to get this information to you by March 4th.\n\nThanks,\n\nJay NC"
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Update Project Documentation",
+        "date": "2025-02-09 02:55:50",
+        "body": "*Dear Jayesh,* I hope you're doing well. As discussed in our recent meeting, I would like to assign you the task of updating the project documentation. Please focus on the following: 1. *Revise the project timeline* to reflect the latest changes. 2. *Include updated milestones* based on the recent developments. The updated documentation should be submitted by *February 15, 2025*. If you require any additional information or clarification, please don't hesitate to reach out. Thank you for your attention to this matter. Best regards, Sarah James Project Manager, XYZ Company",
+        "attachments": [],
+        "category": "Task Assignment",
+        "processing_time": 2.047,
+        "task_name": "Update Project Documentation",
+        "task_description": "Revise the project timeline to reflect the latest changes. Include updated milestones based on the recent developments.",
+        "due_date": "2025-02-15",
+        "response": {
+            "response": {
+                "subject": "Re: Update Project Documentation",
+                "body": "Dear Sarah,\n\nThank you for the email and for assigning me this task. I understand I'm responsible for updating the project documentation, specifically revising the project timeline and including the updated milestones.\n\nI will ensure the updated documentation is submitted by February 15, 2025.\n\nPlease let me know if you have any questions or if there's anything else I can assist with.\n\nBest regards,\nJay NC"
+            }
+        }
+    }
+]

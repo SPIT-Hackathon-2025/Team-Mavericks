@@ -1,10 +1,10 @@
 import time
 import json
 import os
-from mails import fetch_unread_emails  # Import fetch_unread_emails from mails.py
-from gem_mail_analyzer import analyze_emails_with_ollama  # Import analyze_emails_with_ollama from mail_analyzer.py
-from email_details_extractor import extract_email_details  # Import extract_email_details
-from response_generator import generate_responses  # Import generate_responses
+from email_parser.mails import fetch_unread_emails  # Import fetch_unread_emails from mails.py
+from email_parser.gem_mail_analyzer import analyze_emails_with_ollama  # Import analyze_emails_with_ollama from mail_analyzer.py
+from email_parser.email_details_extractor import extract_email_details  # Import extract_email_details
+from email_parser.response_generator import generate_responses  # Import generate_responses
 
 def process_emails():
     print("🔄 Starting the email fetching and analysis process...")
@@ -78,5 +78,5 @@ def process_emails():
         print("🔄 Waiting for 5 seconds before checking for new emails...\n")
         time.sleep(5)  # Wait for 5 seconds before fetching emails again
 
-if __name__ == "__main__":
-    process_emails()
+# if __name__ == "__main__":
+#     process_emails()

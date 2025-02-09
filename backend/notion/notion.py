@@ -90,13 +90,15 @@ def check_due_tasks():
 def triggerCronJob():
 #2 minutes
     schedule.every(2).minutes.do(check_due_tasks)
+    print("Cron Job Triggered")
 # Run Scheduler
     while True:
+        print("Cron Job Triggered")
         schedule.run_pending()
         time.sleep(30)
 
 
-def create_task(task_name, status, priority, due_date, assignee_emails):
+def create_task(task_name,desc, status, priority, due_date, assignee_emails):
     try:
         users_response = notion.users.list()
         users = users_response.get("results", [])
@@ -113,6 +115,9 @@ def create_task(task_name, status, priority, due_date, assignee_emails):
             properties={
                 "Task": {
                     "title": [{"text": {"content": task_name}}]
+                },
+                "Description":{
+                    "rich_text": [{"text": {"content": desc}}]
                 },
                 "Status": {
                     "status": {"name": status}

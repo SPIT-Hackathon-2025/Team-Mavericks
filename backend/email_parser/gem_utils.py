@@ -2,6 +2,9 @@ import json
 import google.generativeai as genai
 from dotenv import load_dotenv
 import os
+from notion.notion import create_task
+from cal.calendar_service import create_event
+
 
 load_dotenv()
 
@@ -35,6 +38,8 @@ def extract_meeting_details(email_body):
     
     # Remove the "```json" markdown block
     content = content.strip("```json\n").strip("```")
+
+    create_event(json.loads(content))
     return json.loads(content)
 
 def extract_task_details(email_body):
@@ -56,6 +61,20 @@ def extract_task_details(email_body):
     
     # Remove the "```json" markdown block
     content = content.strip("```json\n").strip("```")
+    jsonFormat=json.loads(content)
+# create_task("Fix API Bug 2", "Done", "Low", "2025-02-08", ["nilimajnc@gmail.com"])
+    priority = jsonFormat.get('priority', 'Medium')  # Default to "Medium" if key is missing or None
+
+    if priority:  
+        print(f"Priority is set to {priority}")
+    else:
+        print("Priority is empty or undefined")
+
+
+    create_task(jsonFormat["task_name"],jsonFormat["task_description"],"Todo",priority,jsonFormat['due_date'],[]);
+
+
+
     return json.loads(content)
 
 
