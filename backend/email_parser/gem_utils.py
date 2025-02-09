@@ -76,7 +76,7 @@ async def extract_task_details(email_body,websocket):
     await websocket.send_text(f"mail_details: {jsonFormat}")
 
     create_task(jsonFormat["task_name"],jsonFormat["task_description"],"Todo",priority,jsonFormat['due_date'],[]);
-    websocket.send_text(f"action_performed")
+    await websocket.send_text(f"action_performed")
 
 
 

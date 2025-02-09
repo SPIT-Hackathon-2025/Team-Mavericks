@@ -302,30 +302,5 @@
                 "body": "Dear Jayesh,\n\nThank you for your email. I am well, and I hope you are too.\n\nI'm available to meet on February 10, 2025, at 10:00 AM. Please send a calendar invite to confirm.\n\nIf anything changes, I'll let you know.\n\nBest regards,\nSavio"
             }
         }
-    },
-    {
-        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
-        "to": "Jay NC <practicals321@gmail.com>",
-        "cc": "",
-        "bcc": "",
-        "subject": "Scheduling a Meeting to Discuss Project Updates",
-        "date": "2025-02-09 06:21:32",
-        "body": "*Dear Savio* I hope this email finds you well. I would like to schedule a meeting to discuss the recent progress on our ongoing projects and address any updates or concerns. Please let me know your availability for a meeting this week. I’m proposing the following times: - *February 10, 2025* – 10:00 AM to 10:30 AM Kindly confirm which time works best for you, or feel free to suggest any other time if these slots are not suitable. Looking forward to the meeting. Best regards, Jayesh Chaudhari Project Manager, XYZ Company",
-        "attachments": [],
-        "category": "Meeting Request",
-        "processing_time": 1.894,
-        "event_name": "Project Progress Meeting",
-        "event_description": "Discuss the recent progress on our ongoing projects and address any updates or concerns.",
-        "event_time": "2025-02-10T10:00:00",
-        "guests": [
-            "Savio",
-            "Jayesh Chaudhari"
-        ],
-        "response": {
-            "response": {
-                "subject": "Re: Scheduling a Meeting to Discuss Project Updates",
-                "body": "Dear Jayesh,\n\nThank you for reaching out. I'm available to meet on February 10, 2025, at 10:00 AM. \n\nPlease let me know if you need anything else from me before the meeting.\n\nBest regards,\nSavio"
-            }
-        }
     }
 ]

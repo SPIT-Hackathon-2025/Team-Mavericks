@@ -55,7 +55,6 @@ async def analyze_emails_with_ollama(input_file, output_file,websocket):
         total_time += time_taken
         print(f"Categorized email from '{email['from']}' as '{category}' (Time: {time_taken:.3f} sec)")
        
-        await websocket.send_text(f"mail_categorized {category}")  # Send message to WebSocket
 
 
 
@@ -66,5 +65,6 @@ async def analyze_emails_with_ollama(input_file, output_file,websocket):
     print(f"\nEmails categorized and saved to {output_file}")
     print(f"Total processing time: {total_time:.3f} sec")
     print(f"Average processing time per email: {total_time / len(emails):.3f} sec" if emails else "No emails to process.")
+    return categorized_emails[0]['category']
 
 # Run the script

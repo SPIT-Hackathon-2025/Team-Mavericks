@@ -138,3 +138,31 @@ def create_task(task_name,desc, status, priority, due_date, assignee_emails):
     except Exception as error:
         print("❌ Error creating task:", getattr(error, "response", {}).get("data", str(error)))
 # create_task("Fix API Bug 2", "Done", "Low", "2025-02-08", ["nilimajnc@gmail.com"])
+
+
+def get_due_tasks():
+    """Check Notion for due tasks and send reminders."""
+    try:
+        print("🔎 Checking for tasks due today...")
+
+        IST = timezone(timedelta(hours=5, minutes=30))
+        today = datetime.now(IST).date()
+
+        response = notion.databases.query(
+            **{
+                "database_id": DATABASE_ID,
+                "filter": 
+                        {"property": "Due Date", "date": {"equals": today.isoformat()}},
+            }
+        )
+
+        tasks = response.get("results", [])
+        if not tasks:
+            print("✅ No pending reminders to send.")
+            return
+
+        print(f"🔔 {len(tasks)} Tasks Due Today:")
+        return tasks
+
+    except Exception as error:
+        print("❌ Error checking due tasks:", str(error))

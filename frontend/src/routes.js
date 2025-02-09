@@ -45,6 +45,7 @@ const routes = [
     icon: <Icon as={MdCamera} width="20px" height="20px" color="inherit" />,
     component: <Mom />,
   },
+  
   {
     name: 'Main Dashboard',
     layout: '/admin',

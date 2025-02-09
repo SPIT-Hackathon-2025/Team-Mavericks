@@ -39,7 +39,9 @@ async def process_emails(websocket):
             # Analyze the emails with Ollama and save the results to the same filename (overwrite existing file)
             output_file = email_file  # Use the same filename for the output
             print(output_file)
-            await analyze_emails_with_ollama(email_file, output_file,websocket)  # Analyze and categorize emails
+            category=await analyze_emails_with_ollama(email_file, output_file,websocket)  # Analyze and categorize emails
+            await websocket.send_text(f"categorized_mail {category}")
+
             print(f"✅ Categorized emails saved to {output_file}.")
 
             # Extract details and generate responses for the categorized emails
