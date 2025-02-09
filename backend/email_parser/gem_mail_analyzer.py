@@ -5,6 +5,7 @@ import os
 import google.generativeai as genai
 from dotenv import load_dotenv
 
+
 def categorize_email_with_ollama(email_body):
     api_key = os.getenv("GEMINI_KEY")
     if not api_key:
@@ -37,7 +38,7 @@ def categorize_email_with_ollama(email_body):
 
     return category, processing_time
 
-def analyze_emails_with_ollama(input_file, output_file):
+async def analyze_emails_with_ollama(input_file, output_file,websocket):
     """Reads emails from JSON, assigns categories using Ollama, and saves results with timing."""
     with open(input_file, "r", encoding="utf-8") as f:
         emails = json.load(f)
@@ -53,6 +54,10 @@ def analyze_emails_with_ollama(input_file, output_file):
         
         total_time += time_taken
         print(f"Categorized email from '{email['from']}' as '{category}' (Time: {time_taken:.3f} sec)")
+       
+        await websocket.send_text(f"mail_categorized {category}")  # Send message to WebSocket
+
+
 
     # Save results
     with open(output_file, "w", encoding="utf-8") as f:

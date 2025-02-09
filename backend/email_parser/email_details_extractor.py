@@ -2,7 +2,7 @@ import json
 import time
 from email_parser.gem_utils import extract_meeting_details, extract_task_details, extract_followUp_details, extract_transcript
 
-def extract_email_details(input_file, temp_output_file):
+async def extract_email_details(input_file, temp_output_file,websocket):
     """Extracts details from emails and saves intermediate results."""
     start_time = time.time()  # Start timing
 
@@ -12,13 +12,13 @@ def extract_email_details(input_file, temp_output_file):
     for email in emails:
         category = email["category"]
         if category == "Meeting Request":
-            email.update(extract_meeting_details(email["body"]))
+            email.update(await extract_meeting_details(email["body"],websocket))
         elif category == "Task Assignment":
-            email.update(extract_task_details(email["body"]))
+            email.update(await extract_task_details(email["body"],websocket))
         elif category == "Follow-up":
-            email.update(extract_followUp_details(email["body"]))
+            email.update(await extract_followUp_details(email["body"],websocket))
         elif category == "Transcript mail":
-            email.update(extract_transcript(email["body"]))
+            email.update(await extract_transcript(email["body"],websocket))
 
     with open(temp_output_file, "w", encoding="utf-8") as f:
         json.dump(emails, f, indent=4)

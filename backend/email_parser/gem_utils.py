@@ -16,7 +16,7 @@ if not api_key:
 
 genai.configure(api_key=api_key)
 
-def extract_meeting_details(email_body):
+async def extract_meeting_details(email_body,websocket):
     """Extracts meeting details if the email is a Meeting Request."""
     prompt = f"""
     The following email contains a meeting request. Extract the key details:
@@ -31,18 +31,21 @@ def extract_meeting_details(email_body):
     Return the response as a JSON object with fields: "event_name", "event_description", "event_time", "guests".
     """
     model = genai.GenerativeModel("gemini-1.5-flash")
-    response = model.generate_content(prompt)
+    response =model.generate_content(prompt)
     
     # Extract the text from the response
-    content = response._result.candidates[0].content.parts[0].text
+    content =response._result.candidates[0].content.parts[0].text
     
     # Remove the "```json" markdown block
     content = content.strip("```json\n").strip("```")
+    print("content",content)
+    await websocket.send_text(f"mail_details: {json.loads(content)}")
 
     create_event(json.loads(content))
+    await websocket.send_text(f"action_performed")
     return json.loads(content)
 
-def extract_task_details(email_body):
+async def extract_task_details(email_body,websocket):
     """Extracts task details if the email is a Task Assignment."""
     prompt = f"""
     The following email contains a task assignment. Extract the key details:
@@ -56,7 +59,7 @@ def extract_task_details(email_body):
     Return the response as a JSON object with fields: "task_name", "task_description", "due_date".
     """
     model = genai.GenerativeModel("gemini-1.5-flash")
-    response = model.generate_content(prompt)
+    response =model.generate_content(prompt)
     content = response._result.candidates[0].content.parts[0].text
     
     # Remove the "```json" markdown block
@@ -64,21 +67,24 @@ def extract_task_details(email_body):
     jsonFormat=json.loads(content)
 # create_task("Fix API Bug 2", "Done", "Low", "2025-02-08", ["nilimajnc@gmail.com"])
     priority = jsonFormat.get('priority', 'Medium')  # Default to "Medium" if key is missing or None
-
+    
     if priority:  
         print(f"Priority is set to {priority}")
     else:
         print("Priority is empty or undefined")
 
+    await websocket.send_text(f"mail_details: {jsonFormat}")
 
     create_task(jsonFormat["task_name"],jsonFormat["task_description"],"Todo",priority,jsonFormat['due_date'],[]);
+    websocket.send_text(f"action_performed")
+
 
 
 
     return json.loads(content)
 
 
-def extract_followUp_details(email_body):
+async def extract_followUp_details(email_body,websocket):
     """Extracts task details if the email is followup."""
     prompt = f"""
     The following email is a follow-up to a meeting. Extract the key details:
@@ -97,15 +103,18 @@ def extract_followUp_details(email_body):
     Return the response as a JSON object with fields: "meeting_topic", "meeting_date","meeting_time", "action_items", "response_request", "next_steps", "desciption", "priority".
     """
     model = genai.GenerativeModel("gemini-1.5-flash")
-    response = model.generate_content(prompt)
+    response =model.generate_content(prompt)
     content = response._result.candidates[0].content.parts[0].text
     
     # Remove the "```json" markdown block
     content = content.strip("```json\n").strip("```")
+    await websocket.send_text(f"mail_details {content}")
+    await websocket.send_text(f"action performed")
+
     return json.loads(content)
 
 
-def extract_transcript(email_body):
+async def extract_transcript(email_body,websocket):
     """Generates a response email using an LLM."""
     prompt = f"""
     The following email is a transcript of a meeting. Extract the following details for the Minutes of Meeting (MoM):
@@ -143,11 +152,13 @@ def extract_transcript(email_body):
     """
     # Call LLM to generate a response (Replace with actual LLM call)
     model = genai.GenerativeModel("gemini-1.5-flash")
-    response = model.generate_content(prompt)
+    response =model.generate_content(prompt)
     content = response._result.candidates[0].content.parts[0].text
     
     # Remove the "```json" markdown block
     content = content.strip("```json\n").strip("```")
+    await websocket.send_text(f"mail_details {content}")
+    
     return json.loads(content)
 
 def generate_response_llm(email_text, category):

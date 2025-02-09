@@ -1,0 +1,331 @@
+[
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Scheduling a Meeting to Discuss Project Updates",
+        "date": "2025-02-09 06:21:32",
+        "body": "*Dear Savio* I hope this email finds you well. I would like to schedule a meeting to discuss the recent progress on our ongoing projects and address any updates or concerns. Please let me know your availability for a meeting this week. I’m proposing the following times: - *February 10, 2025* – 10:00 AM to 10:30 AM Kindly confirm which time works best for you, or feel free to suggest any other time if these slots are not suitable. Looking forward to the meeting. Best regards, Jayesh Chaudhari Project Manager, XYZ Company",
+        "attachments": [],
+        "category": "Meeting Request",
+        "processing_time": 1.847,
+        "event_name": "Project Progress Meeting",
+        "event_description": "Discuss the recent progress on our ongoing projects and address any updates or concerns.",
+        "event_time": "2025-02-10T10:00:00",
+        "guests": [
+            "Savio",
+            "Jayesh Chaudhari"
+        ],
+        "response": {
+            "response": "Subject: Re: Scheduling a Meeting to Discuss Project Updates\n\nDear Jayesh,\n\nThank you for reaching out. I appreciate you including me in the discussion regarding project updates.\n\nUnfortunately, I believe there might be a misunderstanding as the email is addressed to Savio. My name is Jay.\n\nRegarding your proposed meeting times, February 10th at 10:00 AM to 10:30 AM works well for me.  Please let me know if this is still correct given the name discrepancy. \n\nLooking forward to our meeting.\n\nBest regards,\n\nJay NC"
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Scheduling a Meeting to Discuss Project Updates",
+        "date": "2025-02-09 06:21:32",
+        "body": "*Dear Savio* I hope this email finds you well. I would like to schedule a meeting to discuss the recent progress on our ongoing projects and address any updates or concerns. Please let me know your availability for a meeting this week. I’m proposing the following times: - *February 10, 2025* – 10:00 AM to 10:30 AM Kindly confirm which time works best for you, or feel free to suggest any other time if these slots are not suitable. Looking forward to the meeting. Best regards, Jayesh Chaudhari Project Manager, XYZ Company",
+        "attachments": [],
+        "category": "Meeting Request",
+        "processing_time": 0.588,
+        "event_name": "Project Progress Meeting",
+        "event_description": "Discuss the recent progress on our ongoing projects and address any updates or concerns.",
+        "event_time": "2025-02-10T10:00:00",
+        "guests": [
+            "Savio",
+            "Jayesh Chaudhari"
+        ],
+        "response": {
+            "response": {
+                "subject": "Re: Scheduling a Meeting to Discuss Project Updates",
+                "body": "Dear Jayesh,\n\nThank you for your email. I am available to meet on February 10, 2025, at 10:00 AM.\n\nPlease let me know if you require anything further from my end.\n\nBest regards,\nSavio"
+            }
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Scheduling a Meeting to Discuss Project Updates",
+        "date": "2025-02-09 06:21:32",
+        "body": "*Dear Savio* I hope this email finds you well. I would like to schedule a meeting to discuss the recent progress on our ongoing projects and address any updates or concerns. Please let me know your availability for a meeting this week. I’m proposing the following times: - *February 10, 2025* – 10:00 AM to 10:30 AM Kindly confirm which time works best for you, or feel free to suggest any other time if these slots are not suitable. Looking forward to the meeting. Best regards, Jayesh Chaudhari Project Manager, XYZ Company",
+        "attachments": [],
+        "category": "Meeting Request",
+        "processing_time": 1.01,
+        "event_name": "Project Progress Meeting",
+        "event_description": "Discuss the recent progress on our ongoing projects and address any updates or concerns.",
+        "event_time": "2025-02-10T10:00:00",
+        "guests": [
+            "Savio",
+            "Jayesh Chaudhari"
+        ],
+        "response": {
+            "response": {
+                "subject": "Re: Scheduling a Meeting to Discuss Project Updates",
+                "body": "Dear Jayesh,\n\nThank you for reaching out. I am available to meet on February 10, 2025, at 10:00 AM to 10:30 AM to discuss the project updates.\n\nPlease let me know if you require anything else from me before the meeting.\n\nBest regards,\nSavio"
+            }
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Scheduling a Meeting to Discuss Project Updates",
+        "date": "2025-02-09 06:21:32",
+        "body": "*Dear Savio* I hope this email finds you well. I would like to schedule a meeting to discuss the recent progress on our ongoing projects and address any updates or concerns. Please let me know your availability for a meeting this week. I’m proposing the following times: - *February 10, 2025* – 10:00 AM to 10:30 AM Kindly confirm which time works best for you, or feel free to suggest any other time if these slots are not suitable. Looking forward to the meeting. Best regards, Jayesh Chaudhari Project Manager, XYZ Company",
+        "attachments": [],
+        "category": "Meeting Request",
+        "processing_time": 1.867,
+        "event_name": "Project Progress Meeting",
+        "event_description": "Discuss the recent progress on our ongoing projects and address any updates or concerns",
+        "event_time": "2025-02-10T10:00:00",
+        "guests": [
+            "Savio",
+            "Jayesh Chaudhari"
+        ],
+        "response": {
+            "response": "Subject: Re: Scheduling a Meeting to Discuss Project Updates\n\nDear Jayesh,\n\nThank you for reaching out. I'm available to meet on February 10th at 10:00 AM. \n\nPlease let me know if you need anything else from me before the meeting.\n\nBest regards,\nSavio"
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Scheduling a Meeting to Discuss Project Updates",
+        "date": "2025-02-09 06:21:32",
+        "body": "*Dear Savio* I hope this email finds you well. I would like to schedule a meeting to discuss the recent progress on our ongoing projects and address any updates or concerns. Please let me know your availability for a meeting this week. I’m proposing the following times: - *February 10, 2025* – 10:00 AM to 10:30 AM Kindly confirm which time works best for you, or feel free to suggest any other time if these slots are not suitable. Looking forward to the meeting. Best regards, Jayesh Chaudhari Project Manager, XYZ Company",
+        "attachments": [],
+        "category": "Meeting Request",
+        "processing_time": 0.579,
+        "event_name": "Project Progress Meeting",
+        "event_description": "Discuss the recent progress on our ongoing projects and address any updates or concerns.",
+        "event_time": "2025-02-10T10:00:00",
+        "guests": [
+            "Savio",
+            "Jayesh Chaudhari"
+        ],
+        "response": {
+            "response": "Subject: Re: Scheduling a Meeting to Discuss Project Updates\n\nDear Jayesh,\n\nThank you for reaching out. I'm available to meet on February 10, 2025, at 10:00 AM. \n\nPlease let me know if you require any further information before the meeting.\n\nBest regards,\nSavio"
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Scheduling a Meeting to Discuss Project Updates",
+        "date": "2025-02-09 06:21:32",
+        "body": "*Dear Savio* I hope this email finds you well. I would like to schedule a meeting to discuss the recent progress on our ongoing projects and address any updates or concerns. Please let me know your availability for a meeting this week. I’m proposing the following times: - *February 10, 2025* – 10:00 AM to 10:30 AM Kindly confirm which time works best for you, or feel free to suggest any other time if these slots are not suitable. Looking forward to the meeting. Best regards, Jayesh Chaudhari Project Manager, XYZ Company",
+        "attachments": [],
+        "category": "Meeting Request",
+        "processing_time": 0.82,
+        "event_name": "Project Progress Meeting",
+        "event_description": "Discuss the recent progress on our ongoing projects and address any updates or concerns.",
+        "event_time": "2025-02-10T10:00:00",
+        "guests": [
+            "Savio",
+            "Jayesh Chaudhari"
+        ],
+        "response": {
+            "response": "Subject: Re: Scheduling a Meeting to Discuss Project Updates\n\nDear Jayesh,\n\nThank you for your email. I am well, and I hope you are too.\n\nI am available to meet on February 10, 2025, at 10:00 AM. \n\nPlease let me know if this time still works for you.  If not, I'm happy to try and find another suitable time.\n\nBest regards,\nSavio"
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Scheduling a Meeting to Discuss Project Updates",
+        "date": "2025-02-09 06:21:32",
+        "body": "*Dear Savio* I hope this email finds you well. I would like to schedule a meeting to discuss the recent progress on our ongoing projects and address any updates or concerns. Please let me know your availability for a meeting this week. I’m proposing the following times: - *February 10, 2025* – 10:00 AM to 10:30 AM Kindly confirm which time works best for you, or feel free to suggest any other time if these slots are not suitable. Looking forward to the meeting. Best regards, Jayesh Chaudhari Project Manager, XYZ Company",
+        "attachments": [],
+        "category": "Meeting Request",
+        "processing_time": 0.607,
+        "event_name": "Project Progress Meeting",
+        "event_description": "Discuss the recent progress on our ongoing projects and address any updates or concerns.",
+        "event_time": "2025-02-10T10:00:00",
+        "guests": [
+            "Savio",
+            "Jayesh Chaudhari"
+        ],
+        "response": {
+            "response": {
+                "subject": "Re: Scheduling a Meeting to Discuss Project Updates",
+                "body": "Dear Jayesh,\n\nThank you for your email. I am well, and I hope you are too.\n\nI've received your meeting request to discuss project updates.  Unfortunately, Savio doesn't appear to be associated with this email address. Perhaps there was a mistake in the recipient?\n\nRegarding your proposed meeting times, February 10th at 10:00 AM to 10:30 AM works well for me.  Please confirm if this remains suitable given the possible recipient error.\n\nLooking forward to our discussion.\n\nBest regards,\n\nJay NC"
+            }
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Scheduling a Meeting to Discuss Project Updates",
+        "date": "2025-02-09 06:21:32",
+        "body": "*Dear Savio* I hope this email finds you well. I would like to schedule a meeting to discuss the recent progress on our ongoing projects and address any updates or concerns. Please let me know your availability for a meeting this week. I’m proposing the following times: - *February 10, 2025* – 10:00 AM to 10:30 AM Kindly confirm which time works best for you, or feel free to suggest any other time if these slots are not suitable. Looking forward to the meeting. Best regards, Jayesh Chaudhari Project Manager, XYZ Company",
+        "attachments": [],
+        "category": "Meeting Request",
+        "processing_time": 0.817,
+        "event_name": "Project Progress Meeting",
+        "event_description": "Discuss the recent progress on our ongoing projects and address any updates or concerns",
+        "event_time": "2025-02-10T10:00:00",
+        "guests": [
+            "Savio",
+            "Jayesh Chaudhari"
+        ],
+        "response": {
+            "response": "Subject: Re: Scheduling a Meeting to Discuss Project Updates\n\nDear Jayesh,\n\nThank you for your email. I am well, and I hope you are too.\n\nI've received your request to schedule a meeting this week to discuss project updates.  Unfortunately, I am unavailable at the proposed time on February 10th. Could you please let me know if any of the following times work for you?\n\n* [Propose a few alternative times/dates here]\n\nIf none of these times work, please let me know your availability and I will do my best to accommodate.\n\nBest regards,\n\nSavio (or name used in salutation of received email if available)"
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Scheduling a Meeting to Discuss Project Updates",
+        "date": "2025-02-09 06:21:32",
+        "body": "*Dear Savio* I hope this email finds you well. I would like to schedule a meeting to discuss the recent progress on our ongoing projects and address any updates or concerns. Please let me know your availability for a meeting this week. I’m proposing the following times: - *February 10, 2025* – 10:00 AM to 10:30 AM Kindly confirm which time works best for you, or feel free to suggest any other time if these slots are not suitable. Looking forward to the meeting. Best regards, Jayesh Chaudhari Project Manager, XYZ Company",
+        "attachments": [],
+        "category": "Meeting Request",
+        "processing_time": 2.1,
+        "event_name": "Project Progress Meeting",
+        "event_description": "Discuss the recent progress on our ongoing projects and address any updates or concerns.",
+        "event_time": "2025-02-10T10:00:00",
+        "guests": [
+            "Savio",
+            "Jayesh Chaudhari"
+        ],
+        "response": {
+            "response": {
+                "subject": "Re: Scheduling a Meeting to Discuss Project Updates",
+                "body": "Dear Jayesh,\n\nThank you for your email. I am well, and I hope you are too.\n\nI am available to meet on February 10, 2025, at 10:00 AM. Please let me know if this time still works for you. \n\nI look forward to discussing the project updates.\n\nBest regards,\nSavio"
+            }
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Scheduling a Meeting to Discuss Project Updates",
+        "date": "2025-02-09 06:21:32",
+        "body": "*Dear Savio* I hope this email finds you well. I would like to schedule a meeting to discuss the recent progress on our ongoing projects and address any updates or concerns. Please let me know your availability for a meeting this week. I’m proposing the following times: - *February 10, 2025* – 10:00 AM to 10:30 AM Kindly confirm which time works best for you, or feel free to suggest any other time if these slots are not suitable. Looking forward to the meeting. Best regards, Jayesh Chaudhari Project Manager, XYZ Company",
+        "attachments": [],
+        "category": "Meeting Request",
+        "processing_time": 0.713,
+        "event_name": "Project Progress Meeting",
+        "event_description": "Discuss the recent progress on our ongoing projects and address any updates or concerns.",
+        "event_time": "2025-02-10T10:00:00",
+        "guests": [
+            "Savio",
+            "Jayesh Chaudhari"
+        ],
+        "response": {
+            "response": "Subject: Re: Scheduling a Meeting to Discuss Project Updates\n\nDear Jayesh,\n\nThank you for your email. I am well, and I hope you are too.\n\nI am available to meet on February 10, 2025, at 10:00 AM. \n\nPlease let me know if you require anything further from me before the meeting.\n\nBest regards,\nSavio"
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Scheduling a Meeting to Discuss Project Updates",
+        "date": "2025-02-09 06:21:32",
+        "body": "*Dear Savio* I hope this email finds you well. I would like to schedule a meeting to discuss the recent progress on our ongoing projects and address any updates or concerns. Please let me know your availability for a meeting this week. I’m proposing the following times: - *February 10, 2025* – 10:00 AM to 10:30 AM Kindly confirm which time works best for you, or feel free to suggest any other time if these slots are not suitable. Looking forward to the meeting. Best regards, Jayesh Chaudhari Project Manager, XYZ Company",
+        "attachments": [],
+        "category": "Meeting Request",
+        "processing_time": 1.926,
+        "event_name": "Project Progress Meeting",
+        "event_description": "Discuss the recent progress on our ongoing projects and address any updates or concerns",
+        "event_time": "2025-02-10T10:00:00",
+        "guests": [
+            "Savio",
+            "Jayesh Chaudhari"
+        ],
+        "response": {
+            "response": "Subject: Re: Scheduling a Meeting to Discuss Project Updates\n\nDear Jayesh,\n\nThank you for your email. I am well, and I hope you are too.\n\nI've received your meeting request to discuss project updates.  Unfortunately, you seem to have addressed the email to \"Savio.\"  My name is Jay.\n\nWhile February 10th at 10:00 AM to 10:30 AM works well for me in principle, could you please confirm that this meeting is intended for me?  If so, I'm happy to confirm that time slot.\n\nIf the meeting is for Savio, please let me know, and I'll disregard this email.\n\nBest regards,\n\nJay NC"
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Scheduling a Meeting to Discuss Project Updates",
+        "date": "2025-02-09 06:21:32",
+        "body": "*Dear Savio* I hope this email finds you well. I would like to schedule a meeting to discuss the recent progress on our ongoing projects and address any updates or concerns. Please let me know your availability for a meeting this week. I’m proposing the following times: - *February 10, 2025* – 10:00 AM to 10:30 AM Kindly confirm which time works best for you, or feel free to suggest any other time if these slots are not suitable. Looking forward to the meeting. Best regards, Jayesh Chaudhari Project Manager, XYZ Company",
+        "attachments": [],
+        "category": "Meeting Request",
+        "processing_time": 0.592,
+        "event_name": "Project Progress Meeting",
+        "event_description": "Discuss the recent progress on our ongoing projects and address any updates or concerns.",
+        "event_time": "2025-02-10T10:00:00",
+        "guests": [
+            "Savio",
+            "Jayesh Chaudhari"
+        ],
+        "response": {
+            "response": "Subject: Re: Scheduling a Meeting to Discuss Project Updates\n\nDear Jayesh,\n\nThank you for your email. I appreciate you reaching out to discuss project updates.\n\nUnfortunately, I believe you may have mistakenly addressed this email to \"Savio.\" My name is Jay.\n\nRegarding your proposed meeting time on February 10, 2025, at 10:00 AM, please let me know if you intended this time for me.  If so, that time works well for me. \n\nIf this email was indeed intended for someone else, please disregard this reply.\n\nBest regards,\n\nJay NC"
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Scheduling a Meeting to Discuss Project Updates",
+        "date": "2025-02-09 06:21:32",
+        "body": "*Dear Savio* I hope this email finds you well. I would like to schedule a meeting to discuss the recent progress on our ongoing projects and address any updates or concerns. Please let me know your availability for a meeting this week. I’m proposing the following times: - *February 10, 2025* – 10:00 AM to 10:30 AM Kindly confirm which time works best for you, or feel free to suggest any other time if these slots are not suitable. Looking forward to the meeting. Best regards, Jayesh Chaudhari Project Manager, XYZ Company",
+        "attachments": [],
+        "category": "Meeting Request",
+        "processing_time": 0.636,
+        "event_name": "Project Progress Meeting",
+        "event_description": "Discuss the recent progress on our ongoing projects and address any updates or concerns.",
+        "event_time": "2025-02-10T10:00:00",
+        "guests": [
+            "Savio",
+            "Jayesh Chaudhari"
+        ],
+        "response": {
+            "response": {
+                "to": "Tejashree bhangale <tshreebh03@gmail.com>",
+                "cc": "",
+                "bcc": "",
+                "subject": "Re: Scheduling a Meeting to Discuss Project Updates",
+                "body": "Dear Jayesh,\n\nThank you for your email. I am well, and I hope you are too.\n\nI'm available to meet on February 10, 2025, at 10:00 AM. Please send a calendar invite to confirm.\n\nIf anything changes, I'll let you know.\n\nBest regards,\nSavio"
+            }
+        }
+    },
+    {
+        "from": "Tejashree bhangale <tshreebh03@gmail.com>",
+        "to": "Jay NC <practicals321@gmail.com>",
+        "cc": "",
+        "bcc": "",
+        "subject": "Scheduling a Meeting to Discuss Project Updates",
+        "date": "2025-02-09 06:21:32",
+        "body": "*Dear Savio* I hope this email finds you well. I would like to schedule a meeting to discuss the recent progress on our ongoing projects and address any updates or concerns. Please let me know your availability for a meeting this week. I’m proposing the following times: - *February 10, 2025* – 10:00 AM to 10:30 AM Kindly confirm which time works best for you, or feel free to suggest any other time if these slots are not suitable. Looking forward to the meeting. Best regards, Jayesh Chaudhari Project Manager, XYZ Company",
+        "attachments": [],
+        "category": "Meeting Request",
+        "processing_time": 1.894,
+        "event_name": "Project Progress Meeting",
+        "event_description": "Discuss the recent progress on our ongoing projects and address any updates or concerns.",
+        "event_time": "2025-02-10T10:00:00",
+        "guests": [
+            "Savio",
+            "Jayesh Chaudhari"
+        ],
+        "response": {
+            "response": {
+                "subject": "Re: Scheduling a Meeting to Discuss Project Updates",
+                "body": "Dear Jayesh,\n\nThank you for reaching out. I'm available to meet on February 10, 2025, at 10:00 AM. \n\nPlease let me know if you need anything else from me before the meeting.\n\nBest regards,\nSavio"
+            }
+        }
+    }
+]

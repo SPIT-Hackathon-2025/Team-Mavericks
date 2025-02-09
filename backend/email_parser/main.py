@@ -6,12 +6,15 @@ from email_parser.gem_mail_analyzer import analyze_emails_with_ollama  # Import 
 from email_parser.email_details_extractor import extract_email_details  # Import extract_email_details
 from email_parser.response_generator import generate_responses  # Import generate_responses
 
-def process_emails():
+async def process_emails(websocket):
     print("🔄 Starting the email fetching and analysis process...")
+
 
     # Specify folder paths for attachments and emails
     attachments_folder = "attachments"
     emails_folder = "emails"
+
+    
 
     while True:  # Infinite loop to keep running until you stop manually
         # Fetch unread emails
@@ -25,6 +28,7 @@ def process_emails():
         print(f"Fetched emails: {new_emails}")
 
         if new_emails:
+            await websocket.send_text(f"new_email {new_emails}")
             print("\n📨 New emails received. Categorizing them...\n")
 
             # Save emails to a JSON file (overwrite the existing file)
@@ -35,12 +39,11 @@ def process_emails():
             # Analyze the emails with Ollama and save the results to the same filename (overwrite existing file)
             output_file = email_file  # Use the same filename for the output
             print(output_file)
-            analyze_emails_with_ollama(email_file, output_file)  # Analyze and categorize emails
-
+            await analyze_emails_with_ollama(email_file, output_file,websocket)  # Analyze and categorize emails
             print(f"✅ Categorized emails saved to {output_file}.")
 
             # Extract details and generate responses for the categorized emails
-            extracted_file, _ = extract_email_details(output_file, output_file)
+            extracted_file, _ = await extract_email_details(output_file, output_file,websocket)
 
             # Generate responses and overwrite the same file
             generate_responses(extracted_file, output_file)

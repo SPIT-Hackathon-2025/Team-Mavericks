@@ -6,6 +6,8 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
+import pytz
+
 
 SCOPES = ["https://www.googleapis.com/auth/calendar"]
 CALENDAR_IDS = [
@@ -67,33 +69,99 @@ def get_events():
 # @router.post("/events")
 def create_event(event):
     try:
-        service = initialize_calendar_service()
-        event_start, event_end, attendees, event_start_dt, event_end_dt = extract_event_details(event)
+        creds = get_credentials()
+        service = build("calendar", "v3", credentials=creds)
 
+        # event_start = event["start"]["dateTime"]
+        event_start = event["event_time"]
+        event_end = (datetime.datetime.fromisoformat(event["event_time"]) + datetime.timedelta(hours=1)).isoformat()
+        # event_end = event["end"]["dateTime"]
+        attendees = event.get("attendees", [])
+        description = event.get("description", "")  # Get the description from the event
+
+        # Convert event start and end times to IST
+        ist = pytz.timezone('Asia/Kolkata')
+        event_start_dt = datetime.datetime.fromisoformat(event_start.replace("Z","+00:00"))
+        event_end_dt = datetime.datetime.fromisoformat(event_end.replace("Z","+00:00"))
+        # print("event_start",event_start)
+        # print("event_end",event_end)
+        # event_date = event_start_dt.date()
+
+        # Check if the datetime is naive and localize it
+        if event_start_dt.tzinfo is None:
+            event_start_dt = ist.localize(event_start_dt)
+        else:
+            event_start_dt = event_start_dt.astimezone(ist)
+
+        if event_end_dt.tzinfo is None:
+            event_end_dt = ist.localize(event_end_dt)
+        else:
+            event_end_dt = event_end_dt.astimezone(ist)
+
+        print("event_start_dt",event_start_dt)
+        # print("event_end_dt",event_end_dt)
+        event_date = event_start_dt.date()
+
+        # Define office hours in IST
+        office_start = ist.localize(datetime.datetime.combine(event_date, datetime.time(9, 0)))
+        office_end = ist.localize(datetime.datetime.combine(event_date, datetime.time(17, 0)))
+        # print("office_start",office_start)
+        # print("office_end",office_end)
+        # Fetch all events for the day across calendars
+        busy_slots = []
         for calendar_id in CALENDAR_IDS:
-            if calendar_id == "primary":
-                continue
-
             events_result = service.events().list(
                 calendarId=calendar_id,
-                timeMin=event_start,
-                timeMax=event_end,
+                timeMin=office_start.isoformat(),  # These are now aware
+                timeMax=office_end.isoformat(),     # These are now aware
                 singleEvents=True,
                 orderBy="startTime"
             ).execute()
+            for ev in events_result.get("items", []):
+                ev_start = datetime.datetime.fromisoformat(ev["start"]["dateTime"].replace("Z", "+00:00"))
+                ev_end = datetime.datetime.fromisoformat(ev["end"]["dateTime"].replace("Z", "+00:00"))
 
-            existing_events = events_result.get("items", [])
+                # Check if the event start and end times are naive and localize them
+                if ev_start.tzinfo is None:
+                    ev_start = ist.localize(ev_start)
+                else:
+                    ev_start = ev_start.astimezone(ist)
 
-            if existing_events:
-                raise HTTPException(
-                    status_code=400,
-                    detail=f"Event conflicts with existing events in calendar {calendar_id}. Cannot create event."
-                )
+                if ev_end.tzinfo is None:
+                    ev_end = ist.localize(ev_end)
+                else:
+                    ev_end = ev_end.astimezone(ist)
 
+                busy_slots.append((ev_start, ev_end))
+
+        # Sort busy slots by start time
+        busy_slots.sort()
+
+        if not busy_slots:
+            new_start=event_start_dt
+            new_end=event_end_dt
+        else:   
+            # Find a free time slot
+            new_start = office_start
+            new_end = new_start + (event_end_dt - event_start_dt)
+
+            for busy_start, busy_end in busy_slots:
+                if new_end <= busy_start:  # If the new event fits before the busy slot
+                    break
+                new_start = busy_end  # Move to the next free slot
+                new_end = new_start + (event_end_dt - event_start_dt)  # Adjust end time correctly
+                if new_end > office_end:
+                    raise HTTPException(
+                        status_code=400,
+                        detail="No available time slots within office hours."
+                    )
+    
+        # Prepare the event object
         event_body = {
-            "summary": event["summary"],
-            "start": {"dateTime": event_start, "timeZone": "UTC"},
-            "end": {"dateTime": event_end, "timeZone": "UTC"},
+            "summary": event.get("event_name", "") ,
+            "description": description,  # Add the description here
+            "start": {"dateTime": new_start.isoformat(), "timeZone": "Asia/Kolkata"},
+            "end": {"dateTime": new_end.isoformat(), "timeZone": "Asia/Kolkata"},
             "conferenceData": {
                 "createRequest": {
                     "requestId": "unique-request-id",
@@ -102,7 +170,9 @@ def create_event(event):
             },
             "attendees": [{"email": email} for email in attendees],
         }
+        # print("event_body",event_body)
 
+        # Insert event into primary calendar
         event_result = service.events().insert(
             calendarId="primary",
             body=event_body,
@@ -116,7 +186,7 @@ def create_event(event):
 
     except HttpError as error:
         raise HTTPException(status_code=500, detail=f"An error occurred: {error}")
-    
+
 @router.get("/events/{date}")
 def get_events_for_day(date: str):
     try:
