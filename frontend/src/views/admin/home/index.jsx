@@ -1,26 +1,35 @@
 import React, { useState, useEffect } from "react";
-// Chakra imports
 import { Box, Button } from "@chakra-ui/react";
 import NewMail from "./components/newMail";
 import Step from "./components/Step1";
+import EmailDisplay from "./components/emailDisplay"; // Import the new component
 
 const Index = () => {
   const [processing, setProcessing] = useState(true);
   const [socket, setSocket] = useState(null);
-  const [messages, setMessages] = useState([]); // Store WebSocket messages
+  const [messages, setMessages] = useState([]);
+  const [emails, setEmails] = useState([]); // State to hold email data
+  const [mailDetails, setMailDetails] = useState({});
+  const [newMails, setNewMails] = useState({});
+
 
   useEffect(() => {
-    // Connect to WebSocket server
-    const ws = new WebSocket("ws://localhost:8000/ws");
+    const ws = new WebSocket("ws://127.0.0.1:8000/ws");
 
     ws.onopen = () => {
       console.log("WebSocket connected!");
-      ws.send("Client!"); // Send a message to the server
+      ws.send("Client!");
     };
 
     ws.onmessage = (event) => {
       console.log("Received:", event.data);
-      setMessages((prev) => [...prev, event.data]); // Store received messages
+      if(event.data.startsWith("new_email ")) {
+        event = event.data.replace("new_email ", "");
+        setNewMails(JSON.parse(event));
+      }
+      
+      // const emailData = JSON.parse(event.data)\\; // Assuming the server sends JSON
+      // setEmails((prev) => [...prev, ...emailData]); // Update emails state
     };
 
     ws.onclose = () => {
@@ -30,21 +39,21 @@ const Index = () => {
     setSocket(ws);
 
     return () => {
-      ws.close(); // Clean up WebSocket connection on component unmount
+      ws.close();
     };
   }, []);
 
   const handlePublish = () => {
     setProcessing(false);
     if (socket) {
-      socket.send("Start email processing!"); // Send a message to the WebSocket server
+      socket.send("Start email processing!");
     }
   };
 
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
       <div>
-        <NewMail />
+        {/* <NewMail newMails={newMails} /> */}
         <Step processing={processing} />
 
         <Button
@@ -59,6 +68,9 @@ const Index = () => {
         >
           Publish now
         </Button>
+
+        {/* Display Emails */}
+        {/* <EmailDisplay emails={emails} /> */}
 
         {/* Display WebSocket Messages */}
         <Box mt="20px" p="10px" border="1px solid gray">
